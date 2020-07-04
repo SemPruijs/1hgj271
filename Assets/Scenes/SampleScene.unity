@@ -2602,7 +2602,7 @@ Rigidbody2D:
   m_Mass: 23
   m_LinearDrag: 5
   m_AngularDrag: 0.05
-  m_GravityScale: 5
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2714,7 +2714,7 @@ MonoBehaviour:
   jumpForce: 30000
   amountOfJumps: 1
   turnAroundAnimation: 1
-  topDown: 0
+  topDown: 1
   jumpSound: {fileID: 8300000, guid: c5fb5611c1338468389d3d34b99c75d7, type: 3}
 --- !u!82 &1704850084
 AudioSource:
@@ -2954,8 +2954,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 7.5, y: -269}
-  m_SizeDelta: {x: 570.5, y: 140.40002}
+  m_AnchoredPosition: {x: 0, y: -269}
+  m_SizeDelta: {x: 868.57983, y: 140.40002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1840122343
 MonoBehaviour:
@@ -2989,7 +2989,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Title
+  m_Text: Company Management
 --- !u!222 &1840122344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3297,21 +3297,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
-  - {fileID: 21300000, guid: a2bc749d7c90e4f9391833f58c23988d, type: 3}
-  - {fileID: 21300000, guid: e1479438f625842fd896dc80d1c3bd2b, type: 3}
-  - {fileID: 21300000, guid: d5cf0013614b349cd9eda1d18d12ea95, type: 3}
-  - {fileID: 21300000, guid: dee48c9762f6d4a279105d4292d2d90d, type: 3}
-  - {fileID: 21300000, guid: 05cfc305e3e2d42618a077727c8948bf, type: 3}
-  - {fileID: 21300000, guid: 434ecb7f50ca0441da11c51e4b37ba93, type: 3}
-  - {fileID: 21300000, guid: 4abd7919a81f14221ac4a140d0f2cfdf, type: 3}
-  - {fileID: 21300000, guid: 83b95fb50eefb4b58b9590d50cd933f7, type: 3}
-  - {fileID: 21300000, guid: 0ae690f4bc992456598895d725945714, type: 3}
-  - {fileID: 21300000, guid: e3a32cc0b04664f7087fd0f84c0db9c8, type: 3}
-  - {fileID: 21300000, guid: 1b4fccbcaaa254cf7a8ff3cdf282a0f6, type: 3}
-  - {fileID: 21300000, guid: 7d68dfa022e57432abeed57444c6067d, type: 3}
-  - {fileID: 21300000, guid: e0614a3c5190c4a8dbfc0933944aa654, type: 3}
-  - {fileID: 21300000, guid: 712d412be533f40c2a97b282b1392263, type: 3}
-  - {fileID: 21300000, guid: 7c564bb4ed03e4af0a998109d7407a3e, type: 3}
+  - {fileID: 21300000, guid: 3137747c7419a466fa6dcace028114a8, type: 3}
+  - {fileID: 21300000, guid: 9f3c49e3c34d84c868a10034bda52994, type: 3}
+  - {fileID: 21300000, guid: afde6bd028fa24f1ba156d38e2b843c3, type: 3}
+  - {fileID: 21300000, guid: 6916bcf5c5eb44a4d9942d32aa82e606, type: 3}
 --- !u!212 &1975999654
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3351,7 +3340,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4abd7919a81f14221ac4a140d0f2cfdf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3137747c7419a466fa6dcace028114a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
