@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - AudioManager
   - Coin
+  - School
   layers:
   - Default
   - TransparentFX

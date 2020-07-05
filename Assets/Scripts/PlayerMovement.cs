@@ -18,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
       //Data
       public int amountOfJumps;
       private int _jumpsLeft;
+
+      public GameObject[] workers;
+    
       
       public bool turnAroundAnimation;
       public bool topDown;
@@ -29,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
       //Sound
       [Header("AudioClips")]
       public AudioClip jumpSound;
+
+      public AudioClip pickUpCoin;
 
       void Start()
       {
@@ -86,6 +91,32 @@ public class PlayerMovement : MonoBehaviour
                   _jumpsLeft = amountOfJumps;
               }
           }
+          
+          if (other.gameObject.CompareTag("School"))
+          {
+              if (GameManager.Instance.coins > 9)
+              {
+                  GetWorker();    
+              }
+          }
+
+          if (other.gameObject.CompareTag("Finish"))
+          {
+              if (GameManager.Instance.coins > 100)
+              {
+                  GameManager.Instance.state = GameManager.State.PlayAgain;
+              }
+          }
+      }
+
+      private void OnTriggerEnter2D(Collider2D other)
+      {
+          if (other.gameObject.CompareTag("Coin"))
+          {
+              GameManager.Instance.coins++;
+              _audioSource.PlayOneShot(pickUpCoin);
+              Destroy(other.gameObject);
+          }
       }
 
       private void FixedUpdate()
@@ -102,6 +133,14 @@ public class PlayerMovement : MonoBehaviour
           {
               _rb2d.AddForce(new Vector2(_rb2d.velocity.x, jumpForce));
               _audioSource.PlayOneShot(jumpSound);
+          }
+      }
+
+      public void GetWorker()
+      {
+          foreach (var VARIABLE in workers)
+          {
+              VARIABLE.SetActive(true);
           }
       }
 }

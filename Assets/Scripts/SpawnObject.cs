@@ -6,37 +6,31 @@ using UnityEngine;
 public class SpawnObject : MonoBehaviour
 {
     public GameObject @object;
-    public string withKey;
+    public float inTime;
     
     //audio
     public AudioClip withSound;
-    private AudioSource _audioSource;
+    public AudioSource _audioSource;
     private bool _useSound;
     
-    private bool _keyDown = false;
-
-    private void Start()
-    {
-        _useSound = withSound != null;
-        _audioSource = GameObject.FindWithTag("AudioManager").GetComponent<AudioSource>();
-    }
     
-    void Update()
+    
+    void Start()
     {
-        if (Input.GetKeyDown(withKey))
+        StartCoroutine(SpawnPowerUp());
+    }
+    public IEnumerator SpawnPowerUp()
+    {
+        while (true)
         {
-            if (!_keyDown)
+            if (GameManager.Instance.state == GameManager.State.InGame)
             {
                 SpawnTheObject();
             }
-            _keyDown = true;
-        }
-        else
-        {
-            _keyDown = false;
+            yield return new WaitForSeconds(inTime);
         }
     }
-
+    
     private void SpawnTheObject()
     {
         Vector3 position = transform.position;
@@ -47,4 +41,5 @@ public class SpawnObject : MonoBehaviour
             _audioSource.PlayOneShot(withSound);
         }
     }
+
 }

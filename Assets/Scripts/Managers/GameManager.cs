@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public State state;
+
+    public int coins;
     private static GameManager _instance;
          public static GameManager Instance {
          get {
